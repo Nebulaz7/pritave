@@ -30,7 +30,7 @@ const NavBar = () => {
               <a>Item 1</a>
             </li>
             <li>
-              <a>Pritave</a>
+              <a>Item 2</a>
               <ul className="p-2">
                 <li>
                   <a>Submenu 1</a>
@@ -45,7 +45,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">Pritave</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
