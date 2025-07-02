@@ -5,5 +5,19 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  plugins: ["daisyui"],
+  theme: {
+    extend: {
+      fontFamily: {
+        proxima: ['"Proxima Soft"', "sans-serif"],
+      },
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
+    },
+  },
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["cyberpunk"],
+  },
 };
