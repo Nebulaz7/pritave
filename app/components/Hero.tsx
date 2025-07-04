@@ -51,6 +51,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <div className="text-center text-2xl font-thin">
+        AnoyChat provides a unique platform for anonymous communication with
+        built-in safety features
+      </div>
     </div>
   );
 };
