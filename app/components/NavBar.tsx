@@ -2,28 +2,7 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <div
-      className="
-  navbar 
-  bg-gradient-to-r 
-  from-white/10 
-  via-white/15 
-  to-white/10 
-  backdrop-blur-xl 
-  shadow-2xl 
-  shadow-black/10
-  rounded-4xl 
-  border 
-  border-white/20 
-  sticky
-  hover:bg-gradient-to-r
-  hover:from-white/15
-  hover:via-white/20
-  hover:to-white/15
-  transition-all
-  duration-500
-"
-    >
+    <div className="navbar bg-gradient-to-r from-white/10 via-white/15 to-white/10 backdrop-blur-xl shadow-2xl shadow-black/10 rounded-4xl border border-white/20 sticky hover:bg-gradient-to-r hover:from-white/15 hover:via-white/20 hover:to-white/15 transition-all duration-500">
       {/* Glass shine overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-3xl opacity-30 pointer-events-none"></div>
 
@@ -51,22 +30,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="
-          menu 
-          menu-sm 
-          dropdown-content 
-          bg-white/10 
-          backdrop-blur-xl 
-          border 
-          border-white/20 
-          rounded-box 
-          z-1 
-          mt-3 
-          w-52 
-          p-2 
-          shadow-xl
-          shadow-black/20
-        "
+            className="menu menu-sm dropdown-content bg-white/10 backdrop-blur-xl borderborder-white/20 rounded-box z-1 mt-3w-52 p-2 shadow-xl shadow-black/20"
           >
             <li>
               <a className="text-white hover:bg-white/20">Features</a>
