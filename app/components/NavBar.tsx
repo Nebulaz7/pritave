@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const NavBar = () => {
   return (
@@ -17,9 +18,12 @@ const NavBar = () => {
           </h1>
         </div>
         <div>
-          <button className="appearance-none px-6 py-1 font-heading rounded-full text-sm bg-white/10 border border-white/20 hover:bg-white/20 focus-visible:bg-white/20 text-white backdrop-blur-sm transition-all duration-200">
+          <Link
+            href="/signin"
+            className="appearance-none cursor-pointer px-6 py-1 font-heading rounded-full text-sm bg-white/10 border border-white/20 hover:bg-white/20 focus-visible:bg-white/20 text-white backdrop-blur-sm transition-all duration-200"
+          >
             Try now
-          </button>
+          </Link>
         </div>
       </div>
     </header>
