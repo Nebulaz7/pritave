@@ -2,11 +2,29 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { supabase } from "../../lib/supabase";
 
 const SignIn = () => {
-  const handleOAuthLogin = (provider: string) => {
-    // Handle OAuth login logic here
-    console.log(`Logging in with ${provider}`);
+  const handleOAuthLogin = async (provider: string) => {
+    if (provider === "google") {
+      try {
+        const { data, error } = await supabase.auth.signInWithOAuth({
+          provider: "google",
+          options: {
+            redirectTo: `${window.location.origin}/clientHandler`,
+          },
+        });
+
+        if (error) {
+          console.error("Error signing in with Google:", error);
+          return;
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    } else {
+      console.log(`Logging in with ${provider}`);
+    }
   };
 
   return (
