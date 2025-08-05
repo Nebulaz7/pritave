@@ -1,23 +1,24 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const FeatureSection = () => {
+  const { scrollY } = useScroll();
+
+  // Transform scroll position to different speeds
+  const y1 = useTransform(scrollY, [0, 1000], [0, -200]); // Slow
+  const y2 = useTransform(scrollY, [0, 1000], [0, -500]); // Fast
+
   return (
-    <div className="m-10 p-10 flex gap-4">
-      FeatureSection
-      <h1>Framer motion</h1>
-      <motion.div
-        initial={{ transform: "translate(-100px)", backgroundColor: "#fb64b6" }}
-        whileInView={{
-          transform: "translate(0px)",
-          backgroundColor: "#67afe4",
-        }}
-        transition={{ type: "spring", ease: "easeOut", duration: 10 }}
-        className="h-6 w-6 rounded-2xl m-2 p-10 bg-pink-400"
-      />
+    <div style={{ height: "200vh" }}>
+      <motion.div className="bg-blue-500 w-full h-screen" style={{ y: y1 }}>
+        Slow parallax element
+      </motion.div>
+
+      <motion.div className="bg-pink-500 w-full h-screen" style={{ y: y2 }}>
+        Fast parallax element
+      </motion.div>
     </div>
   );
 };
-
 export default FeatureSection;

@@ -44,26 +44,27 @@ body {
 
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1b23;
-  border-radius: 10px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #af1aff;
-  border-radius: 10px;
+  border-radius: 5px;
+  min-height: 20px;
+  max-height: 30px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #af1aff;
+  background: #9818dd;
 }
 
 /* Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #af1aff #1a1b23;
+  scrollbar-width: auto;
+  scrollbar-color: #af1aff transparent;
 }
