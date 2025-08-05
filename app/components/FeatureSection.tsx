@@ -8,11 +8,12 @@ const FeatureSection = () => {
       FeatureSection
       <h1>Framer motion</h1>
       <motion.div
-        //   whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 0.8 }}
-        onTapStart={() => {
-          console.log("Tap has started");
+        initial={{ transform: "translate(-100px)", backgroundColor: "#fb64b6" }}
+        whileInView={{
+          transform: "translate(0px)",
+          backgroundColor: "#67afe4",
         }}
+        transition={{ type: "spring", ease: "easeOut", duration: 10 }}
         className="h-6 w-6 rounded-2xl m-2 p-10 bg-pink-400"
       />
     </div>

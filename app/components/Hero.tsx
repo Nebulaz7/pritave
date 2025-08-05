@@ -1,12 +1,19 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <div className="relative min-h-screen w-full p-0 md:p-8 flex items-center justify-center bg-[rgb(25, 26, 31)]">
       {/* Windowed Container for Larger Devices */}
-      <div className="relative w-full max-w-5xl mx-auto rounded-none md:rounded-3xl overflow-hidden shadow-none md:shadow-2xl">
+      <motion.div
+        initial={{ translateX: "-100px", opacity: 0 }}
+        whileInView={{ translateX: "0px", opacity: 1 }}
+        transition={{ type: "spring", duration: 3 }}
+        className="relative w-full max-w-5xl mx-auto rounded-none md:rounded-3xl overflow-hidden shadow-none md:shadow-2xl"
+      >
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
           <Image
@@ -44,7 +51,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
