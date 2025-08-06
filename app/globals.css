@@ -39,6 +39,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  /* filter: contrast(170%) brightness(100%) grayscale(0%) url(#noiseFilter); */
   font-family: "Proxima Soft", sans-serif;
 }
 
