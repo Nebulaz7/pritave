@@ -2,9 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
+  const { scrollY } = useScroll();
+
+  const y1 = useTransform(scrollY, [0, 1000], [0, 1]);
+
   return (
     <div className="relative min-h-screen w-full p-0 md:p-8 flex items-center justify-center bg-[rgb(25, 26, 31)]">
       {/* Windowed Container for Larger Devices */}
@@ -12,6 +16,8 @@ const Hero = () => {
         initial={{ translateX: "-100px", opacity: 0 }}
         whileInView={{ translateX: "0px", opacity: 1 }}
         transition={{ type: "spring", duration: 3 }}
+        viewport={{ once: true }}
+        style={{ y: y1 }}
         className="relative w-full max-w-5xl mx-auto rounded-none md:rounded-3xl overflow-hidden shadow-none md:shadow-2xl"
       >
         {/* Background Image */}

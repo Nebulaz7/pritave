@@ -7,11 +7,11 @@ const FeatureSection = () => {
 
   // Transform scroll position to different speeds
   const y1 = useTransform(scrollY, [0, 1000], [0, -200]); // Slow
-  const y2 = useTransform(scrollY, [0, 1000], [0, -500]); // Fast
+  const y2 = useTransform(scrollY, [0, 1000], [0, -1000]); // Fast
 
   return (
     <div style={{ height: "200vh" }}>
-      <motion.div className="bg-blue-500 w-full h-screen" style={{ y: y1 }}>
+      <motion.div className="bg-blue-500 w-full h-screen" style={{ y: y2 }}>
         Slow parallax element
       </motion.div>
 
